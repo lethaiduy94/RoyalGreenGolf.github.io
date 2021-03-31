@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 500px){
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    *{
+        margin:  0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    section.flow{
+        width: 100%;
+        position: relative;
+        height: 100%;
+        padding-bottom: 50px;
+        
+    }
+    section.flow .max-width{
+        max-width: 800px;
+        text-align: center;
+    }
+    section.flow .max-width h2{
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        
+        padding: 50px 15px;
+    }
+    section.flow .max-width > p{
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 2em;
+        padding: 0 30px;
+        text-align: left;
+    }
+    section.flow .max-width .flow-box{
+        display: flex;
+        justify-content: center;
+        margin: 50px 20px;
+        flex-wrap: wrap;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    section.flow .max-width .flow-box .colum1{
+        width: 30%;
+        position: relative;
+    }
+    section.flow .max-width .flow-box .colum1 p{
+        height: 300px;
+        font-size: 25px;
+        background: #95389E;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 110px 10px;
+        text-align: center;
+    }
+    section.flow .max-width .flow-box .colum2{
+        width: 70%;
+    }
+    
+    section.flow .max-width .flow-box .colum2 .colum2Img{
+        width: 220px;
+        height: 210px;
+        overflow: hidden;
+    }
+    section.flow .max-width .flow-box .colum2 .colum2Img img{
+        width: 100%;
+        height: auto;
+    }
+    section.flow .max-width .flow-box .colum2 .hinh2{
+        width: 220px;
+        height: 210px;
+        overflow: hidden;
+    }
+    section.flow .max-width .flow-box .colum2 .hinh2 img{
+        transform: translate(-25%,-27%);
+    }
+    section.flow .max-width .flow-box .colum2 > p{
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: left;
+        padding: 15px;
+        line-height: 2em;
+        
+    }
+    section.flow .max-width .flow-box .colum2 .hinh3 img{
+        transform: translate(-5%,10%);
+        width: 150%;
+    }
+    section.flow .max-width .flow-box .colum2 .hinh4 img{
+        transform: translate(-20%,-2%);
+        width: 179%;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 10;
+        align-items: center;
+        align-content: center;
+        background: #F2FCFD;
+    }
+    .container h2{
+        display: block;
+        margin: 50px 15px 50px 15px;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: -2px;
+        
+    }
+    .container .buttonBox{
+        position: relative;
+        z-index: 4;
+        
+    }
+    .container .buttonBox.blur{
+        z-index: 0;
+        transition:  0.3s ease-in-out ;
+        
+    }
+    .container button{
+        width: 175px;
+        height: 55px;
+        margin: 50px;
+        border-radius: 36px;
+        background-color: #95389E;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        box-shadow: 0 4px 0 rgb(99,38,104,1);
+        border: none;
+        cursor: pointer;
+        transition:.5s ease-in-out !important;
+    }
+    .container .imgbox{
+        margin: 0 auto;
+        width: 345px;
+        height: 235px;
+        position: relative;
+        z-index: 2;
+    }
+    .container .imgbox img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index:2;
+        
+    }
+    section.flow .max-width h2,
+    section.flow .max-width > p,
+    .container h2{
+        opacity: 0;
+        transition: all 1.5s;
+        transform: translateY(50%);
+    }
+    section.flow .max-width h2.show,
+    section.flow .max-width > p.show,
+    .container h2.show{
+        opacity: 1;
+        transition: all 1.5s;
+        transform: translateY(0%);
+    }
+    section.flow .max-width .flow-box.flow-box1,
+    section.flow .max-width .flow-box.flow-box3,
+    section.flow .max-width .flow-box.flow-box4,
+    .container .imgbox{
+        opacity: 0;
+        transition: all 1.5s;
+        transform: translateX(-50%);
+    }
+    section.flow .max-width .flow-box.flow-box1.show,
+    section.flow .max-width .flow-box.flow-box3.show,
+    section.flow .max-width .flow-box.flow-box4.show,
+    .container .imgbox.show{
+        opacity: 1;
+        transition: all 1.5s;
+        transform: translateX(0);
+    }
+    section.flow .max-width .flow-box.flow-box2{
+        opacity: 0;
+        transition: all 1.5s;
+        transform: translateX(-50%);
+    }
+    section.flow .max-width .flow-box.flow-box2.show{
+        opacity: 1;
+        transition: all 1.5s;
+        transform: translateX(0);
+    }
+    .container .buttonBox{
+        opacity: 0;
+        transition:all  1.5s ease-in-out;
+        transform: translateY(50%);
+        
+    }
+    .container .buttonBox.show{
+        opacity: 1;
+        transition: all  1.5s ease-in-out;
+        transform: translateY(0%);
+    }
+    
+}   
